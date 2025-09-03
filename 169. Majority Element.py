@@ -4,4 +4,5 @@ def majorityElement(nums):
         if nums.count(i) > len(nums) / 2:
             return i
 
-print(majorityElement([2,2,1,1,1,2,2]))
+
+# print(majorityElement([2,2,1,1,1,2,2]))
