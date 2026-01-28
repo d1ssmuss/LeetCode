@@ -1,12 +1,13 @@
-class Solution:
-    def kLengthApart(self, nums: List[int], k: int) -> bool:
-        count = k
-        for i in range(len(nums)):
-            if nums[i] == 0:
-                count += 1
-            else:
-                if count >= k:
-                    count = 0
-                else:
-                    return False
-        return True
+class Solution(object):
+    def kLengthApart(self, nums, k):
+        """
+        :type nums: List[int]
+        :type k: int
+        :rtype: bool
+        """
+        arr = [i for i in range(len(nums)) if nums[i] == 1]
+        for i in range(len(arr) - 1):
+            if abs(arr[i] - arr[i+1]) <= k:
+                return False
+        else:
+            return True
