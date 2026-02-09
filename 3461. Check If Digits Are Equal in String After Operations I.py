@@ -4,6 +4,7 @@ class Solution(object):
         :type s: str
         :rtype: bool
         """
+        # https://leetcode.com/problems/check-if-digits-are-equal-in-string-after-operations-i/submissions/1913786649/?envType=daily-question&envId=2026-01-22
         s = list(map(int, s))
         num = ''
         while len(num) != 2:
@@ -17,4 +18,5 @@ class Solution(object):
 
 
 print(Solution().hasSameDigits("3902"))
+
 print(Solution().hasSameDigits("34789"))
