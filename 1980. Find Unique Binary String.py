@@ -24,5 +24,5 @@ class Solution(object):
 
 print(Solution().findDifferentBinaryString(["01","10"]))
 print(Solution().findDifferentBinaryString(["00","01"]))
-
 print(Solution().findDifferentBinaryString(["111","011","001"]))
+
