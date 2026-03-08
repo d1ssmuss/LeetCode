@@ -13,14 +13,16 @@ class Solution(object):
         Если ответов несколько, вы можете вернуть любой из них.
         """
         # print(sorted(nums))
-        for i in range(0, 2 ** len(nums)):
-            num = bin(i)[2:]
-            if len(num) == len(nums) and num not in nums:
-                return num
-        else:
+        if '0' * len(nums) not in nums:
             return '0' * len(nums)
+        else:
+            for i in product('01', repeat=len(nums)):
+                n = ''.join(i)
+                if n not in nums:
+                    return n
 
 
 print(Solution().findDifferentBinaryString(["01","10"]))
 print(Solution().findDifferentBinaryString(["00","01"]))
+
 print(Solution().findDifferentBinaryString(["111","011","001"]))
