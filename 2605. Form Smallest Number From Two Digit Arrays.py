@@ -5,10 +5,12 @@ class Solution(object):
         :type nums2: List[int]
         :rtype: int
         """
-        minimum1 = min(nums1)
-        minimum2 = min(nums2)
-        a = [i for i in nums1 if i in nums2]
-        if a == []:
-            return min(int(str(minimum1) + str(minimum2)), int(str(minimum2) + str(minimum1)))
+        # общий минимум
+        mn = set(nums1) & set(nums2)
+        if mn:
+            return min(mn)
         else:
-            return min(a)
+            if min(nums1) > min(nums2):
+                return int(str(min(nums2)) + str(min(nums1)))
+            else:
+                return int(str(min(nums1)) + str(min(nums2)))
