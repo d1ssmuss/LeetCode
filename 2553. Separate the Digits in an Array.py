@@ -9,4 +9,3 @@ class Solution(object):
             for digit in str(num):
                 arr.append(int(digit))
         return arr
-        
