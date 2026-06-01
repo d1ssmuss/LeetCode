@@ -9,6 +9,10 @@ class Solution(object):
 
         # nums.sort()
         # return nums[1:len(nums)-1]
-
-        arr = [i for i in nums if i != min(nums) and i != max(nums)]
-        return len(arr)
+        mx = max(nums)
+        mn = min(nums)
+        c = 0
+        for i in nums:
+            if i != mx and i != mn:
+                c += 1
+        return c
