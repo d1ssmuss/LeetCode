@@ -12,8 +12,6 @@ class Solution(object):
         return s
 
 
-
-
 print(Solution().minimumCost([1,2,3]))
 print(Solution().minimumCost([6,5,7,9,2,2]))
 print(Solution().minimumCost([5,5]))
