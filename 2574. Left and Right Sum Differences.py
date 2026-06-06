@@ -16,7 +16,6 @@ class Solution(object):
                 left.append(0)
             else:
                 left.append(sum(s_left))
-
         nums = nums[::-1]
         for i in range(len(nums)):
             # print(nums[:i])
