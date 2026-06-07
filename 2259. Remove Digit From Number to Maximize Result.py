@@ -8,12 +8,22 @@ class Solution(object):
 
         Верните результирующую строку после удаления ровно одного вхождения цифры из number таким образом, чтобы значение результирующей строки в десятичной форме было максимальным. Тестовые примеры генерируются таким образом, чтобы цифра встречалась в number хотя бы один раз.
         """
-        mx = -1
-        for i in range(len(number)):
-            if number[i] == digit:
-                num = number[:i] + number[i+1:]
-                mx = max(mx, int(num))
-        return mx
+        # mx = -1
+        # for i in range(len(number)):
+        #     if number[i] == digit:
+        #         num = number[:i] + number[i+1:]
+        #         mx = max(mx, int(num))
+        # return mx
+        mx = None
+                for i in range(len(number)):
+                    if number[i] == digit:
+                        num = number[:i] + number[i+1:]
+                        if mx == None:
+                            mx = num
+                        else:
+                            if num > mx:
+                                mx = num
+                return mx
 
 print(Solution().removeDigit('123', '3'))
 print(Solution().removeDigit('1231', '1'))
