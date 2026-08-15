@@ -1,14 +1,11 @@
 class Solution:
-    def longestSubsequence(self, nums) -> int:
+    def longestSubsequence(self, nums: List[int]) -> int:
         if set(nums) == {0}:
             return 0
         else:
+            nums.sort()
             left, right = 0, len(nums) - 1
             mx_len_left, mx_len_right = -1, -1
-            # нужен весь массив -> return 0 (If no such subsequence exists, return 0.)
-            r = 0
-            for num in nums:
-                r ^= num
             while True:
                 result = 0
                 for i in nums[left:right + 1]:
@@ -28,7 +25,7 @@ class Solution:
                 else:
                     mx_len_right = len(nums[left:right + 1])
                     break
-            return max(mx_len_left, mx_len_right) if r != 0 else len(nums)
+            return max(mx_len_left, mx_len_right)
 
 
 
