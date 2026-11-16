@@ -15,3 +15,11 @@ class Solution:
                 even, odd = odd, even + 1
             res += odd
         return res % (10 ** 9 + 7)
+
+
+print(Solution().numOfSubarrays([1, 3, 5])) # 4
+print(Solution().numOfSubarrays([2, 4, 6])) # 0
+print(Solution().numOfSubarrays([1, 2, 3, 4, 5, 6, 7])) # 16
+print(Solution().numOfSubarrays([1, 3, 5, 9, 10])) # 8
+print(Solution().numOfSubarrays([1, 2, 5, 9, 10])) # 8
+print(Solution().numOfSubarrays([2, 4, 5, 6])) # 6
